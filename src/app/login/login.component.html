@@ -1,0 +1,86 @@
+<div class="login-class" style="padding:5%">
+    <div>
+      <img [src]="wissonicon" alt="Place image title" />
+    </div>
+    <div>
+      <h3>Hello there, Sign in to continue</h3>
+  
+      <div class="col-4">
+        <form class="row g-3" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="col-12">
+            <label for="inputEmail" class="form-label">Username/Email</label>
+            <input
+              type="email"
+             
+              class="form-control"
+              id="inputEmail"
+            />
+           
+          </div>
+  
+          <div class="col-12">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input
+              type="password"
+            
+              class="form-control"
+              id="inputPassword"
+            />
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="isChecked"
+                id="gridCheck"
+                (click)="isChecked = !isChecked"
+                required
+              />
+              <label class="form-check-label" for="gridCheck">
+                By creating/logging into an account, you are agreeing with our
+                <strong> Terms & Conditions </strong> and
+                <strong> Privacy policys </strong>
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="width:100%"
+              [disabled]="!isChecked"
+            >
+              Next
+            </button>
+          </div>
+          <h5 style="color: blue; text-align:center; padding-top:15%">
+            Sign in with company SSO
+          </h5>
+        </form>
+      </div>
+  
+      <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div>
+            <label>Username/Email</label>
+            <input type="text" />
+            <div>
+              <!-- <label>
+                Username is required
+              </label> -->
+      <!-- </div>
+          </div>
+          <div>
+            <label>Password</label>
+            <input />
+            <div> -->
+      <!-- <label>
+                Password is required
+              </label> -->
+      <!-- </div>
+          </div>
+          <button>Login</button>
+        </form> -->
+    </div>
+  </div>
+  
